@@ -2,6 +2,7 @@ import React from 'react'
 import Loading from "../components/Loading"
 import { useParams, Link } from 'react-router-dom'
 import './SingleCocktails.scss'
+import {FaArrowAltCircleLeft} from "react-icons/fa"
 
 const SingleCocktails = () => {
   const { id } = useParams()
@@ -71,37 +72,37 @@ const SingleCocktails = () => {
     return (
       <section className='section-single'>
         <Link className='section-single__link' to="/">
-          Voltar para Home
+          <FaArrowAltCircleLeft fontSize={50} color="#F6C6EA"/>
         </Link>
         <h2 className='section-single__title'>{name}</h2>
         <div className='cocktail'>
           <img className='cocktail__image' src={image} alt={name} />
           <div className='descritions'>
             <p>
-              <span>Nome: </span>
+              <span className='descritions__span'>Nome: </span>
               {name}
             </p>
             <p>
-              <span>Categoria: </span>
+              <span className='descritions__span'>Categoria: </span>
               {category}
             </p>
             <p>
-              <span>Info: </span>
+              <span className='descritions__span'>Info: </span>
               {info}
             </p>
             <p>
-              <span>glass: </span>
+              <span className='descritions__span'>glass: </span>
               {glass}
             </p>
             <p>
-              <span>Instruções: </span>
+              <span className='descritions__span'>Instruções: </span>
               {instructions}
             </p>
             <p>
-              <span>Ingredients:</span>
+              <span className='descritions__span'>Ingredients:</span>
               {ingredients.map((item, index) => {
                 return item ? <span key={index}>
-                  <p>{item}</p>
+                  {item}
                 </span> : null
               })}
             </p>
