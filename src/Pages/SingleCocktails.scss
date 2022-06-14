@@ -1,0 +1,57 @@
+@use '../global.scss';
+
+.section-single {
+    max-width: 120rem;
+    margin: 4rem auto;
+    position: relative;
+    padding: 2rem;
+
+    &__link{
+        padding: 1rem;
+        background-color: global.$color-4;
+        color: global.$color-dark;
+        position: absolute;
+    }
+
+    &__title{
+        text-align: center;
+        font-size: 4rem;
+        color: global.$color-dark;
+    }
+}
+
+.cocktail {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1rem;
+    gap: 3rem;
+
+    @media screen and(min-width:786px) {
+        flex-direction: row;
+        gap: 5rem;
+        margin-top: 2rem;
+    }
+
+   &__image {
+        width: 90%;
+        max-width: 40rem;
+    }
+}
+
+.descritions{
+    width: 50%;
+
+    p{
+        font-size: 1.4rem;
+        margin: 1rem;
+        @media screen and(min-width:786px) {
+           font-size: 1.6rem;
+        }
+
+        span{
+            background-color: global.$color-1;
+        }
+    }
+}

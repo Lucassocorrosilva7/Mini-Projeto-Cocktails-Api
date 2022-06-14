@@ -1,0 +1,29 @@
+@use "../global.scss";
+
+.section-cocktails {
+    padding: 2rem;
+    width: 90%;
+
+    &__title{
+        margin-bottom: 2rem;
+        color: global.$color-dark;
+        font-size: 2rem;
+
+        @media screen and(min-width:768px) {
+            font-size: 4rem;
+        }
+    }
+
+}
+
+.cocktails {
+    img {
+        width: 100%;
+        display: block;
+    }
+
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+    gap: 2rem;
+}
